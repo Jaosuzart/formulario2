@@ -1,3 +1,5 @@
+Imagem do projeto: <img width="1440" height="900" alt="image" src="https://github.com/user-attachments/assets/55b26b02-c1f1-4341-ba64-7bee746e8912" />
+
 Formulário de Integração com Comunidade 🚀
 Este é um formulário criado para captar os interesses, expectativas e objetivos dos membros da sua comunidade. Ele funciona como uma ponte entre você e sua audiência, ajudando a entender como melhor servir cada pessoa que deseja fazer parte do seu ecossistema digital.
 🔗 Acesse agora:
