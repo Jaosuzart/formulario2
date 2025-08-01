@@ -1,4 +1,3 @@
-✅ README personalizado para formulario2-six.vercel.app
 Formulário de Integração com Comunidade 🚀
 Este é um formulário criado para captar os interesses, expectativas e objetivos dos membros da sua comunidade. Ele funciona como uma ponte entre você e sua audiência, ajudando a entender como melhor servir cada pessoa que deseja fazer parte do seu ecossistema digital.
 🔗 Acesse agora:
