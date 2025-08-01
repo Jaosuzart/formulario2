@@ -1,57 +1,118 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário de Cadastro</title>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="formulario.css">
-
+    <title>Formulário de Cadastro Corrigido</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./estilo/formulario.css">
 </head>
 
 <body>
-
-    <div class="formCadastro__app">
-
-        <div class="formCadastro__container">
-            <h1 class="heading">Cadastre uma tarefa</h1>
-
-            <form action="#" class="formCadastro" id="shopping-add">
-                <label for="txtTitulo">
-                    Título
-                </label>
-                <input id="txtTitulo" type="text" name="txtTitulo">
-
-                <label for="txtDescricao">
-                    Descrição da tarefa
-                </label>
-                <textarea id="txtDescricao" rows="5" maxlength="255"></textarea>
-                <div id="contador"> <span>255</span> caracteres</div>
-
-                <label>
-                    <input type="checkbox" name="" id="chkAceito">
-                    Comprometo-me a entregar esta tarefa o quanto antes
-                </label>
-
-                <input id="btn" type="submit" value="Adicionar">
-
-            </form>
+    <div class="container">
+        <form id="registrationForm">
+            <div class="header">
+                <h1><i class="fas fa-code"></i> Formulário de Cadastro</h1>
+                <p>Preencha todos os campos obrigatórios marcados com asterisco (*)</p>
+            </div>
+            <fieldset>
+                <legend>Introdução</legend>
+                <label for="email" class="required">Email</label>
+                <input type="email" name="email" id="email" placeholder="seu.email@exemplo.com" required="">
+                <p class="hint">Digite um email válido que você utiliza frequentemente</p>
+                <label for="community">O que você quer na minha comunidade</label>
+                <input type="number" id="community" min="0" max="10" value="0">
+                <label for="dataNascimento">Data de Nascimento</label>
+                <input type="date" id="dataNascimento" min="1920-01-01" max="2023-12-31" value="2000-01-01">
+                <div class="radio-group">
+                    <label class="required">Possui atividade extra?</label>
+                    <div style="display: flex; gap: 20px; margin-top: 10px;">
+                        <label><input type="radio" name="atvExtra" value="s" required=""> Sim</label>
+                        <label><input type="radio" name="atvExtra" value="n"> Não</label>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Área de interesse</legend>
+                <div class="checkbox-group">
+                    <label class="required">Selecione suas áreas de interesse:</label>
+                    <div style="display: flex; flex-wrap: wrap; gap: 15px; margin-top: 15px;">
+                        <label><input type="checkbox" name="interesse" value="HTML"> HTML</label>
+                        <label><input type="checkbox" name="interesse" value="CSS"> CSS</label>
+                        <label><input type="checkbox" name="interesse" value="JavaScript"> JavaScript</label>
+                        <label><input type="checkbox" name="interesse" value="PHP"> PHP</label>
+                        <label><input type="checkbox" name="interesse" value="Python"> Python</label>
+                    </div>
+                </div>
+                <div class="checkbox-container">
+                    <div class="checkbox-group">
+                        <h3>Front-end</h3>
+                        <div class="checkbox-row"><label><input type="checkbox" name="linguagem" value="HTML">
+                                HTML</label></div>
+                        <div class="checkbox-row"><label><input type="checkbox" name="linguagem" value="CSS">
+                                CSS</label></div>
+                        <div class="checkbox-row"><label><input type="checkbox" name="linguagem" value="JavaScript">
+                                JavaScript</label></div>
+                    </div>
+                    <div class="checkbox-group">
+                        <h3>Back-end</h3>
+                        <div class="checkbox-row"><label><input type="checkbox" name="linguagem" value="PHP">
+                                PHP</label></div>
+                        <div class="checkbox-row"><label><input type="checkbox" name="linguagem" value="Python">
+                                Python</label></div>
+                        <div class="checkbox-row"><label><input type="checkbox" name="linguagem" value="NodeJS">
+                                Node.js</label></div>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Mensagem e Contrato</legend>
+                <label for="mensagem">Mensagem (opcional)</label>
+                <textarea name="msg" id="mensagem" maxlength="255" placeholder="Digite sua mensagem aqui..."></textarea>
+                <div class="contract-container">
+                    <div class="contract-title">CONTRATO DE ATUALIZAÇÃO</div>
+                    <div class="contract-content">
+                        <p>1.1 Regra 1: Ao se cadastrar, você concorda em receber atualizações periódicas sobre nossa
+                            plataforma .</p>
+                        <p>1.2 Regra 2: Você concorda que suas informações serão armazenadas de acordo com nossa
+                            política de privacidade.</p>
+                        <p>1.3 Regra 3: Você pode cancelar sua inscrição a qualquer momento através do link no rodapé
+                            dos e-mails.</p>
+                    </div>
+                </div>
+                <div class="checkbox-row">
+                    <label><input type="checkbox" id="aceitarContrato" required=""><span class="required">Li e aceito o
+                            contrato de atualização.</span></label>
+                </div>
+                <label for="arquivo">Anexar documento (opcional)</label>
+                <input type="file" id="arquivo">
+            </fieldset>
+            <input type="hidden" name="token" value="abcde321">
+            <div class="button-group">
+                <button type="submit"><i class="fas fa-paper-plane"></i> Enviar Formulário</button>
+                <button type="button" id="btnLimpar"><i class="fas fa-broom"></i> Limpar Tudo</button>
+                <button type="button" id="btnAjuda"><i class="fas fa-question-circle"></i> Ajuda</button>
+            </div>
+            <div class="extra-controls">
+                <label for="nivelSatisfacao">Nível de satisfação:</label>
+                <div class="slider-container"><input type="range" id="nivelSatisfacao" min="0" max="100" step="1"
+                        value="50"></div>
+                <div class="color-time-container">
+                    <div><label for="horaPreferencia">Hora preferida para contato:</label><input type="time"
+                            id="horaPreferencia"></div>
+                    <div><label for="corPreferida">Cor preferida:</label><input type="color" id="corPreferida"
+                            value="#726a95"></div>
+                </div>
+            </div>
+        </form>
+        <div class="footer">
+            <p>© 2025 Todos os direitos reservados | Formulário seguro</p>
         </div>
-
-        <div id="feedbackMessage">
-            <p>aa</p>
-            <button><span class="fa fa-close"></span></button>
-
-        </div>
-
-
-
     </div>
-
-    <script src="formulario.js"></script>
-
+    <script>
+    </script>
 </body>
 
 </html>
