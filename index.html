@@ -21,7 +21,7 @@
                 <legend>Introdução</legend>
                 <label for="email" class="required">Email</label>
                 <input type="email" name="email" id="email" placeholder="seu.email@exemplo.com" required="">
-                <p class="hint">Digite um email válido que você utiliza frequentemente</p>
+                <p class="hint">Digite um email válido</p>
                 <label for="community">O que você quer na minha comunidade?</label>
                 <input type="text" name="community" id="community"
                     placeholder="Ex.: Aprender mais sobre programação web" required="" pattern="[A-Za-z\s]{1,}">
@@ -38,34 +38,22 @@
             <fieldset>
                 <legend>Área de interesse</legend>
                 <div class="checkbox-group">
-                    <label class="required">Selecione suas áreas de interesse:</label>
-                    <div style="display: flex; flex-wrap: wrap; gap: 15px; margin-top: 15px;">
-                        <label><input type="checkbox" name="interesse" value="HTML"> HTML</label>
-                        <label><input type="checkbox" name="interesse" value="CSS"> CSS</label>
-                        <label><input type="checkbox" name="interesse" value="JavaScript"> JavaScript</label>
-                        <label><input type="checkbox" name="interesse" value="PHP"> PHP</label>
-                        <label><input type="checkbox" name="interesse" value="Python"> Python</label>
-                    </div>
+                    <h3>Front-end</h3>
+                    <div class="checkbox-row"><label><input type="checkbox" name="linguagem" value="HTML">
+                            HTML</label></div>
+                    <div class="checkbox-row"><label><input type="checkbox" name="linguagem" value="CSS">
+                            CSS</label></div>
+                    <div class="checkbox-row"><label><input type="checkbox" name="linguagem" value="JavaScript">
+                            JavaScript</label></div>
                 </div>
-                <div class="checkbox-container">
-                    <div class="checkbox-group">
-                        <h3>Front-end</h3>
-                        <div class="checkbox-row"><label><input type="checkbox" name="linguagem" value="HTML">
-                                HTML</label></div>
-                        <div class="checkbox-row"><label><input type="checkbox" name="linguagem" value="CSS">
-                                CSS</label></div>
-                        <div class="checkbox-row"><label><input type="checkbox" name="linguagem" value="JavaScript">
-                                JavaScript</label></div>
-                    </div>
-                    <div class="checkbox-group">
-                        <h3>Back-end</h3>
-                        <div class="checkbox-row"><label><input type="checkbox" name="linguagem" value="PHP">
-                                PHP</label></div>
-                        <div class="checkbox-row"><label><input type="checkbox" name="linguagem" value="Python">
-                                Python</label></div>
-                        <div class="checkbox-row"><label><input type="checkbox" name="linguagem" value="NodeJS">
-                                Node.js</label></div>
-                    </div>
+                <div class="checkbox-group">
+                    <h3>Back-end</h3>
+                    <div class="checkbox-row"><label><input type="checkbox" name="linguagem" value="PHP">
+                            PHP</label></div>
+                    <div class="checkbox-row"><label><input type="checkbox" name="linguagem" value="Python">
+                            Python</label></div>
+                    <div class="checkbox-row"><label><input type="checkbox" name="linguagem" value="NodeJS">
+                            Node.js</label></div>
                 </div>
             </fieldset>
             <fieldset>
@@ -75,11 +63,11 @@
                 <div class="contract-container">
                     <div class="contract-title">CONTRATO DE ATUALIZAÇÃO</div>
                     <div class="contract-content">
-                        <p>1.1 Regra 1: Ao se cadastrar, você concorda em receber atualizações periódicas sobre nossa
+                        <p>Regra 1: Ao se cadastrar, você concorda em receber atualizações periódicas sobre nossa
                             plataforma .</p>
-                        <p>1.2 Regra 2: Você concorda que suas informações serão armazenadas de acordo com nossa
+                        <p> Regra 2: Você concorda que suas informações serão armazenadas de acordo com nossa
                             política de privacidade.</p>
-                        <p>1.3 Regra 3: Você pode cancelar sua inscrição a qualquer momento através do link no rodapé
+                        <p> Regra 3: Você pode cancelar sua inscrição a qualquer momento através do link no rodapé
                             dos e-mails.</p>
                     </div>
                 </div>
@@ -112,8 +100,6 @@
             <p>© 2025 Todos os direitos reservados | Formulário seguro</p>
         </div>
     </div>
-    <script>
-    </script>
 </body>
 
 </html>

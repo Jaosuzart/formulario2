@@ -24,9 +24,6 @@ body {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   overflow: hidden;
 }
-.fas fa-code {
-  padding-left: 20vh;
-}
 
 .header {
   background: linear-gradient(to right, #726a95, #5a517c);
@@ -117,20 +114,12 @@ textarea:focus {
   box-shadow: 0 0 0 3px rgba(114, 106, 149, 0.2);
 }
 
-.checkbox-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin-top: 15px;
-}
-
 .checkbox-group {
   background: white;
   border: 1px solid #ddd;
   border-radius: 10px;
   padding: 20px;
-  flex: 1;
-  min-width: 250px;
+  margin-bottom: 20px;
 }
 
 .checkbox-group h3 {
@@ -295,37 +284,31 @@ input[type="range"]::-webkit-slider-thumb {
   background-color: #f9f9ff;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 360px) and (max-width: 1024px) {
   .checkbox-container {
     flex-direction: column;
   }
 
   .color-time-container {
     flex-direction: column;
-    gap: 15px;
+    gap: 6px;
   }
 
   form {
-    padding: 20px;
+    padding: 15px;
   }
 
   .header {
-    padding: 20px;
+    padding: 15px;
   }
 
-  fieldset {
-    padding: 20px;
+  .checkbox-group {
+    width: 100%;
   }
 }
 
 @media (max-width: 480px) {
-  .button-group {
-    flex-direction: column;
-  }
-
-  input[type="submit"],
-  input[type="button"],
-  button {
+  .container {
     width: 100%;
   }
 }
